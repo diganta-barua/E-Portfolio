@@ -1,0 +1,1248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diganta Barua - Software Engineer / Full-Stack Developer</title>
+    <link rel="icon" href="img/logo.png" type="image/png">
+    <meta name="description" content="Diganta Barua - Software Engineer & Full-Stack Developer. Minimal, modern, and professional portfolio.">
+    <meta name="keywords" content="Diganta Barua, portfolio, AIUB, Software Engineer, Full-Stack Developer, C++, Java, C#, .NET, Web Development, Game Development">
+    <meta name="author" content="Diganta Barua">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- EmailJS Script -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init({
+                publicKey: "LhdG6Wko_lHnMBJ6n",
+                blockHeadless: true,
+                blockList: {
+                    list: [],
+                    watchVariable: 'userAgent',
+                },
+                limitRate: {
+                    id: 'app',
+                    throttle: 10000,
+                },
+            });
+        })();
+    </script>
+    
+    <link rel="stylesheet" href="folder/style.css">
+    <link rel="stylesheet" href="folder/card.css">
+    <link rel="stylesheet" href="folder/projects.css">
+    <style>
+        body {
+            font-family: 'Inter', 'Poppins', Arial, sans-serif;
+            background: #181a20;
+            color: #e4e6eb;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar, .footer {
+            background: #23272f;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+        }
+        .logo-monogram, .logo-db {
+            color: #00aaff;
+            background: #23272f;
+        }
+        .logo-db {
+            background: #00aaff;
+            color: #181a20;
+        }
+        .hero {
+            background: #23272f;
+            padding: 100px 0 60px 0;
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+        }
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        .hero-content {
+            display: flex;
+            align-items: center;
+            gap: 4rem;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .hero-text {
+            flex: 1;
+            min-width: 400px;
+        }
+        .hero-image {
+            flex: 0 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            padding: 1rem;
+        }
+        .hero-name {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: #e4e6eb;
+            margin-bottom: 0.5rem;
+            line-height: 1.2;
+        }
+        .hero-title {
+            font-size: 1.5rem;
+            color: #00aaff;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+        .hero-subtitle {
+            font-size: 1.2rem;
+            color: #b0b3b8;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+            max-width: 500px;
+        }
+        .profile-image {
+            border-radius: 50%;
+            width: 320px;
+            height: 320px;
+            object-fit: cover;
+            border: 3px solid rgba(255,255,255,0.1);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+            transition: all 0.3s ease;
+        }
+        .profile-image:hover {
+            transform: scale(1.03);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.5);
+            border-color: rgba(0,170,255,0.3);
+        }
+        .btn-primary {
+            background: #00aaff;
+            color: #181a20;
+        }
+        .btn-primary:hover {
+            background: #0077ff;
+        }
+        .section-title {
+            color: #e4e6eb;
+        }
+        .section-subtitle {
+            color: #00aaff;
+        }
+        .about {
+            background: #181a20;
+        }
+        .about-text {
+            color: #e4e6eb;
+        }
+        .skills {
+            background: #23272f;
+        }
+        .skill-badge {
+            background: #23272f;
+            color: #e4e6eb;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+        }
+        .skill-badge i {
+            color: #00aaff;
+        }
+        .projects {
+            background: #181a20;
+        }
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+        .project-card {
+            background: #23272f;
+            color: #e4e6eb;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(255,255,255,0.1);
+            position: relative;
+        }
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,170,255,0.2);
+            border-color: rgba(0,170,255,0.3);
+        }
+        .project-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        .project-card:hover .project-image {
+            transform: scale(1.05);
+        }
+        .project-content {
+            padding: 1.5rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .project-card h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #e4e6eb;
+            margin: 0 0 0.75rem 0;
+            line-height: 1.3;
+        }
+        .project-card p {
+            color: #b0b3b8;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin: 0 0 1rem 0;
+            flex: 1;
+        }
+        .project-tech {
+            color: #00aaff;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1.25rem;
+            padding: 0.5rem 0.75rem;
+            background: rgba(0,170,255,0.1);
+            border-radius: 20px;
+            border: 1px solid rgba(0,170,255,0.2);
+            display: inline-block;
+            width: fit-content;
+        }
+        .project-links {
+            display: flex;
+            gap: 0.75rem;
+            margin-top: auto;
+        }
+        .project-links .btn {
+            flex: 1;
+            text-align: center;
+            padding: 0.75rem 1rem;
+            font-size: 0.9rem;
+            font-weight: 600;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+        .project-links .btn-primary {
+            background: linear-gradient(135deg, #00aaff, #0077ff);
+            color: #fff;
+            border: none;
+        }
+        .project-links .btn-primary:hover {
+            background: linear-gradient(135deg, #0077ff, #005fcc);
+            transform: translateY(-2px);
+        }
+        .project-links .btn-secondary {
+            background: transparent;
+            color: #00aaff;
+            border: 1px solid #00aaff;
+        }
+        .project-links .btn-secondary:hover {
+            background: #00aaff;
+            color: #181a20;
+        }
+        .timeline {
+            border-left: 3px solid #00aaff;
+        }
+        .timeline-date {
+            color: #00aaff;
+        }
+        .timeline-title {
+            color: #e4e6eb;
+        }
+        .timeline-desc {
+            color: #b0b3b8;
+        }
+        .contact {
+            background: #23272f;
+        }
+        .contact-form {
+            background: #181a20;
+            color: #e4e6eb;
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #e4e6eb;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            background: #23272f;
+            border: 2px solid rgba(255,255,255,0.1);
+            border-radius: 8px;
+            color: #e4e6eb;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            font-family: 'Inter', sans-serif;
+        }
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #00aaff;
+            box-shadow: 0 0 0 3px rgba(0,170,255,0.1);
+        }
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: #b0b3b8;
+        }
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        .contact-form .btn-primary {
+            width: 100%;
+            padding: 0.875rem 2rem;
+            font-size: 1rem;
+            font-weight: 600;
+            background: linear-gradient(135deg, #00aaff, #0077ff);
+            border: none;
+            border-radius: 8px;
+            color: #fff;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 0.5rem;
+        }
+        .contact-form .btn-primary:hover {
+            background: linear-gradient(135deg, #0077ff, #005fcc);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,170,255,0.3);
+        }
+        .contact-info-card {
+            background: #181a20;
+            border-radius: 16px;
+            padding: 2rem;
+            border: 1px solid rgba(255,255,255,0.1);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+        }
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            padding: 0.75rem;
+            background: rgba(255,255,255,0.02);
+            border-radius: 8px;
+            transition: background 0.3s ease;
+        }
+        .contact-item:hover {
+            background: rgba(255,255,255,0.05);
+        }
+        .contact-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, #00aaff, #0077ff);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 1.25rem;
+            flex-shrink: 0;
+        }
+        .contact-item div:last-child {
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+        }
+        .contact-item strong {
+            color: #e4e6eb;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+        .contact-item a {
+            color: #b0b3b8;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+        .contact-item a:hover {
+            color: #00aaff;
+        }
+        a { color: #00aaff; }
+        a:hover { color: #0077ff; }
+        @media (max-width: 768px) {
+            .hero-name { font-size: 2.5rem; }
+            .hero-title { font-size: 1.25rem; }
+            .hero-subtitle { font-size: 1rem; }
+            .profile-image { width: 240px; height: 240px; }
+            .hero-content { gap: 2rem; justify-content: center; text-align: center; }
+            .hero-text { min-width: auto; }
+            .section-title { font-size: 1.3rem; }
+            .projects-grid { grid-template-columns: 1fr; }
+            .hero-cta a { display: block; margin: 0.5rem 0; }
+            .contact-info-section { grid-template-columns: 1fr !important; }
+            .about-details { flex-direction: column; gap: 1.5rem; }
+            .about-content { flex-direction: column; }
+            .quick-info-card { max-width: 100% !important; margin-top: 1.5rem !important; }
+            .contact-item { flex-direction: row; text-align: left; gap: 1rem; }
+            .contact-icon { margin: 0; }
+            div[style*="display: grid; grid-template-columns: 1fr 1.2fr"] { 
+                display: flex !important; 
+                flex-direction: column !important; 
+                gap: 1.5rem !important; 
+            }
+        }
+        
+        .contact-item:hover {
+            border-left-color: #00aaff !important;
+            transform: translateX(5px);
+            background: rgba(0,170,255,0.05) !important;
+        }
+        
+        .timeline-item:hover {
+            transform: translateY(-2px) translateX(3px);
+            background: rgba(0,170,255,0.08) !important;
+            border-color: rgba(0,170,255,0.3) !important;
+            box-shadow: 0 6px 25px rgba(0,170,255,0.15);
+        }
+        
+        .timeline-item:hover .timeline-title {
+            color: #00aaff !important;
+        }
+    </style>
+    
+    <script src="script.js" defer></script>
+    <script src="scroll-animations-new.js" defer></script>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-db">DB</span>
+                <span class="logo-text">Diganta Barua</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1 class="hero-name">Diganta Barua</h1>
+                        <p class="hero-title">Software Engineer / Full-Stack Developer</p>
+                        <p class="hero-subtitle">Building elegant, scalable solutions in C++, Java, C#, .NET, and modern web technologies. Minimal, professional, and always learning.</p>
+                        <div class="hero-cta" style="margin-bottom: 1.5rem;">
+                            <a href="#projects" class="btn btn-primary" style="margin-right: 1rem;">View My Work</a>
+                            <a href="folder/cv_mubin.pdf" target="_blank" class="btn btn-secondary" style="background: transparent; border: 2px solid #00aaff; color: #00aaff; padding: 0.7rem 1.5rem; border-radius: 8px; text-decoration: none; transition: all 0.3s ease;">
+                                <i class="fas fa-download"></i> Download CV
+                            </a>
+                        </div>
+                        <div class="hero-social" style="display: flex; gap: 1rem;">
+                            <a href="https://github.com/diganta-barua" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="https://www.facebook.com/share/19ReWgat88/" class="social-link" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                            <a href="https://www.instagram.com/d.barua_/" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="mailto:baruadiganta958@gmail.com" class="social-link" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                    <div class="hero-image">
+                        <img src="img/pic1.jpg" alt="Diganta Barua" class="profile-image">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- About Section -->
+        <section id="about" class="about">
+                <div class="container">
+                    <div class="section-header">
+                        <h2 class="section-title">About Me</h2>
+                        <p class="section-subtitle">Clarity, code, and creativity</p>
+                    </div>
+                    <div class="about-content" style="display: flex; flex-wrap: wrap; gap: 2.5rem; align-items: flex-start;">
+                        <div class="about-text" style="flex: 2; min-width: 260px;">
+                            <h3>Hello, I'm Diganta Barua</h3>
+                            <p>I'm a passionate Software Engineer and Full-Stack Developer, currently pursuing my BSc in Computer Science and Engineering at American International University Bangladesh. I specialize in building robust, scalable applications using C++, Java, C#, .NET, and modern web technologies. My approach is minimal, professional, and focused on clarity and elegant solutions.</p>
+                            <p>I thrive on solving complex problems, collaborating with diverse teams, and continuously learning new technologies. My interests include game development, algorithm design, and crafting seamless user experiences.</p>
+                            
+                            <!-- Quick Info Section -->
+                            <div class="quick-info-card" style="background: #23272f; border-radius: 16px; padding: 1.5rem; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 8px 32px rgba(0,0,0,0.3); margin-top: 2rem; max-width: 400px;">
+                                <h3 style="color: #e4e6eb; margin-bottom: 1.5rem; font-size: 1.1rem; display: flex; align-items: center; gap: 0.75rem;">
+                                    <i class="fas fa-user" style="color: #00aaff;"></i>
+                                    Quick Info
+                                </h3>
+                                <div class="detail-item" style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem; padding: 0.75rem; background: rgba(255,255,255,0.02); border-radius: 8px;">
+                                    <i class="fas fa-map-marker-alt" style="color: #00aaff; width: 20px;"></i>
+                                    <div><strong>Location:</strong> Dhaka, Bangladesh</div>
+                                </div>
+                                <div class="detail-item" style="display: flex; align-items: center; gap: 1rem; padding: 0.75rem; background: rgba(255,255,255,0.02); border-radius: 8px;">
+                                    <i class="fas fa-envelope" style="color: #00aaff; width: 20px;"></i>
+                                    <div><strong>Email:</strong> baruadiganta958@gmail.com</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="about-details" style="flex: 1; min-width: 220px;">
+                            <div class="education-card" style="background: #23272f; border-radius: 16px; padding: 2rem; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 8px 32px rgba(0,0,0,0.3);"">>
+                                <h3 style="color: #e4e6eb; margin-bottom: 1.5rem; font-size: 1.25rem; display: flex; align-items: center; gap: 0.75rem;">
+                                    <i class="fas fa-graduation-cap" style="color: #00aaff;"></i>
+                                    Education Journey
+                                </h3>
+                                <div class="timeline" style="position: relative; padding-left: 1.5rem;">
+                                    <!-- Vertical Timeline Line -->
+                                    <div style="position: absolute; left: 0.75rem; top: 1rem; bottom: 1rem; width: 3px; background: linear-gradient(180deg, #00aaff 0%, rgba(0,170,255,0.6) 50%, rgba(0,170,255,0.2) 100%); border-radius: 2px;"></div>
+                                    
+                                    <div class="timeline-item" style="background: rgba(0,170,255,0.06); border-radius: 12px; padding: 1.25rem; margin-bottom: 1.25rem; border: 1px solid rgba(0,170,255,0.15); position: relative; margin-left: 0.75rem;">
+                                        <!-- Timeline Node -->
+                                        <div style="position: absolute; left: -1.5rem; top: 1rem; width: 14px; height: 14px; background: #00aaff; border-radius: 50%; box-shadow: 0 0 0 3px #23272f, 0 0 0 5px rgba(0,170,255,0.3); z-index: 2;"></div>
+                                        <!-- Branch Line -->
+                                        <div style="position: absolute; left: -0.9rem; top: 1.4rem; width: 0.9rem; height: 2px; background: #00aaff;"></div>
+                                        
+                                        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem;">
+                                            <div class="timeline-date" style="color: #00aaff; font-weight: 600; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.5px;">2023 – 2027</div>
+                                            <div style="padding: 0.25rem 0.75rem; background: rgba(0,170,255,0.15); border-radius: 12px; font-size: 0.7rem; color: #00aaff; font-weight: 500;">CURRENT</div>
+                                        </div>
+                                        <div class="timeline-title" style="color: #e4e6eb; font-weight: 600; font-size: 1rem; margin-bottom: 0.4rem; line-height: 1.3;">BSc in Computer Science & Engineering</div>
+                                        <div class="timeline-desc" style="color: #b3b3b3; font-size: 0.85rem; line-height: 1.3;">American International University Bangladesh</div>
+                                    </div>
+                                    
+                                    <div class="timeline-item" style="background: rgba(0,170,255,0.06); border-radius: 12px; padding: 1.25rem; margin-bottom: 1.25rem; border: 1px solid rgba(0,170,255,0.15); position: relative; margin-left: 0.75rem;">
+                                        <!-- Timeline Node -->
+                                        <div style="position: absolute; left: -1.5rem; top: 1rem; width: 14px; height: 14px; background: #00aaff; border-radius: 50%; box-shadow: 0 0 0 3px #23272f, 0 0 0 5px rgba(0,170,255,0.3); z-index: 2;"></div>
+                                        <!-- Branch Line -->
+                                        <div style="position: absolute; left: -0.9rem; top: 1.4rem; width: 0.9rem; height: 2px; background: #00aaff;"></div>
+                                        
+                                        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem;">
+                                            <div class="timeline-date" style="color: #00aaff; font-weight: 600; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.5px;">2021</div>
+                                            <div style="padding: 0.25rem 0.75rem; background: rgba(34,197,94,0.15); border-radius: 12px; font-size: 0.7rem; color: #22c55e; font-weight: 500;">COMPLETED</div>
+                                        </div>
+                                        <div class="timeline-title" style="color: #e4e6eb; font-weight: 600; font-size: 1rem; margin-bottom: 0.4rem; line-height: 1.3;">Higher Secondary Certificate</div>
+                                        <div class="timeline-desc" style="color: #b3b3b3; font-size: 0.85rem; line-height: 1.3;">Habibullah Bahar University College</div>
+                                    </div>
+                                    
+                                    <div class="timeline-item" style="background: rgba(0,170,255,0.06); border-radius: 12px; padding: 1.25rem; border: 1px solid rgba(0,170,255,0.15); position: relative; margin-left: 0.75rem;">
+                                        <!-- Timeline Node -->
+                                        <div style="position: absolute; left: -1.5rem; top: 1rem; width: 14px; height: 14px; background: #00aaff; border-radius: 50%; box-shadow: 0 0 0 3px #23272f, 0 0 0 5px rgba(0,170,255,0.3); z-index: 2;"></div>
+                                        <!-- Branch Line -->
+                                        <div style="position: absolute; left: -0.9rem; top: 1.4rem; width: 0.9rem; height: 2px; background: #00aaff;"></div>
+                                        
+                                        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem;">
+                                            <div class="timeline-date" style="color: #00aaff; font-weight: 600; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.5px;">2019</div>
+                                            <div style="padding: 0.25rem 0.75rem; background: rgba(34,197,94,0.15); border-radius: 12px; font-size: 0.7rem; color: #22c55e; font-weight: 500;">COMPLETED</div>
+                                        </div>
+                                        <div class="timeline-title" style="color: #e4e6eb; font-weight: 600; font-size: 1rem; margin-bottom: 0.4rem; line-height: 1.3;">Secondary School Certificate</div>
+                                        <div class="timeline-desc" style="color: #b3b3b3; font-size: 0.85rem; line-height: 1.3;">Banani Bidyaniketan School & College</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+        
+        <!-- Skills Section -->
+        <section id="skills" class="skills">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Skills</h2>
+                    <p class="section-subtitle">Core technologies & frameworks</p>
+                </div>
+                <div class="skills-row">
+                    <div class="skill-badge"><i class="fas fa-code"></i><span>C++</span></div>
+                    <div class="skill-badge"><i class="fab fa-java"></i><span>Java</span></div>
+                    <div class="skill-badge"><i class="fas fa-hashtag"></i><span>C#</span></div>
+                    <div class="skill-badge"><i class="fab fa-microsoft"></i><span>.NET</span></div>
+                    <div class="skill-badge"><i class="fab fa-html5"></i><span>HTML5</span></div>
+                    <div class="skill-badge"><i class="fab fa-css3-alt"></i><span>CSS3</span></div>
+                    <div class="skill-badge"><i class="fab fa-js"></i><span>JavaScript</span></div>
+                    <div class="skill-badge"><i class="fas fa-gamepad"></i><span>Game Dev</span></div>
+                    <div class="skill-badge"><i class="fas fa-database"></i><span>SQL</span></div>
+                    <div class="skill-badge"><i class="fab fa-git-alt"></i><span>Git</span></div>
+                </div>
+            </div>
+        </section>
+        <!-- Projects Section -->
+        <section id="projects" class="projects">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Projects</h2>
+                    <p class="section-subtitle">Showcasing my top work (fetched from <a href='https://github.com/diganta-barua' target='_blank'>GitHub</a>)</p>
+                </div>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-content">
+                            <h3>E-Shop Management System</h3>
+                            <p>A comprehensive multi-category e-commerce management system built with C#. Features user authentication, product management, shopping cart functionality, and admin controls for sellers and customers.</p>
+                            <div class="project-tech">C# • Windows Forms • SQL Server</div>
+                            <div class="project-links">
+                                <a href="https://github.com/diganta-barua/E-Shop" target="_blank" class="btn btn-primary">
+                                    <i class="fab fa-github"></i> GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-content">
+                            <h3>AIUB Course Planner</h3>
+                            <p>Java-based desktop application designed to help students and administrators efficiently manage university courses. Features course scheduling, prerequisite tracking, and academic planning tools.</p>
+                            <div class="project-tech">Java • Swing • Database Integration</div>
+                            <div class="project-links">
+                                <a href="https://github.com/diganta-barua/AIUB-Course-Planner" target="_blank" class="btn btn-primary">
+                                    <i class="fab fa-github"></i> GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-content">
+                            <h3>Hill Climbing Algorithm</h3>
+                            <p>Implementation of optimization algorithms in C++. Demonstrates advanced problem-solving techniques and algorithmic thinking in computer science applications.</p>
+                            <div class="project-tech">C++ • Algorithm Design • Optimization</div>
+                            <div class="project-links">
+                                <a href="https://github.com/diganta-barua/Hill-project-" target="_blank" class="btn btn-primary">
+                                    <i class="fab fa-github"></i> GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Extra Activities Section -->
+        <section id="extra" class="projects">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Extra Activities</h2>
+                    <p class="section-subtitle">Research & Poster Presentations</p>
+                </div>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <img src="img/nanotech poster final.jpg" alt="Nanotechnology Poster" class="project-image">
+                        <div class="project-content">
+                            <h3>Nanotechnology Research Poster</h3>
+                            <p>Comprehensive research presentation exploring nanotechnology applications in medicine, electronics, energy, and materials science. Awarded Best Poster at the Physics Poster Contest.</p>
+                            <div class="project-tech">Research • Design • Presentation • Physics</div>
+                            <div class="project-links">
+                                <a href="folder/doc/nano.pdf" target="_blank" class="btn btn-primary">
+                                    <i class="fas fa-file-pdf"></i> View PDF
+                                </a>
+                                <a href="folder/doc/nanotech.zip" target="_blank" class="btn btn-secondary">
+                                    <i class="fas fa-download"></i> Download
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <img src="img/Why Students Choose Computer Science._page-0001.jpg" alt="CS Research" class="project-image">
+                        <div class="project-content">
+                            <h3>Computer Science Career Research</h3>
+                            <p>In-depth survey analysis of CS students at AIUB examining factors influencing career decisions. Comprehensive data collection and statistical analysis of academic trends in Bangladesh.</p>
+                            <div class="project-tech">Survey Research • Data Analysis • Academic Study</div>
+                            <div class="project-links">
+                                <a href="folder/doc/cs.pdf" target="_blank" class="btn btn-primary">
+                                    <i class="fas fa-file-pdf"></i> View PDF
+                                </a>
+                                <a href="folder/doc/cs.re.zip" target="_blank" class="btn btn-secondary">
+                                    <i class="fas fa-download"></i> Download
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Contact</h2>
+                    <p class="section-subtitle">Let's connect and collaborate</p>
+                </div>
+                <div style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 2.5rem; align-items: flex-start; max-width: 1200px; margin: 0 auto;">
+                    <div class="contact-info-section">
+                        <div class="contact-info-card" style="background: #23272f; border-radius: 16px; padding: 2rem; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 8px 32px rgba(0,0,0,0.3);">
+                            <h3 style="color: #e4e6eb; margin-bottom: 1.5rem; font-size: 1.25rem; display: flex; align-items: center; gap: 0.75rem;">
+                                <i class="fas fa-address-book" style="color: #00aaff;"></i>
+                                Get In Touch
+                            </h3>
+                            <div class="contact-grid" style="display: grid; gap: 1rem;">
+                                <div class="contact-item" style="display: flex; align-items: center; gap: 1rem; padding: 1rem; background: rgba(255,255,255,0.02); border-radius: 12px; transition: all 0.3s ease; border-left: 4px solid transparent;">
+                                    <div class="contact-icon" style="width: 45px; height: 45px; background: linear-gradient(135deg, #00aaff, #0077cc); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.1rem;">
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                    <div style="flex: 1;">
+                                        <strong style="color: #e4e6eb; display: block; margin-bottom: 0.25rem;">Email</strong>
+                                        <a href="mailto:baruadiganta958@gmail.com" style="color: #00aaff; text-decoration: none; font-size: 0.9rem;">baruadiganta958@gmail.com</a>
+                                    </div>
+                                </div>
+                                <div class="contact-item" style="display: flex; align-items: center; gap: 1rem; padding: 1rem; background: rgba(255,255,255,0.02); border-radius: 12px; transition: all 0.3s ease; border-left: 4px solid transparent;">
+                                    <div class="contact-icon" style="width: 45px; height: 45px; background: linear-gradient(135deg, #1877f2, #0d5aa7); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.1rem;">
+                                        <i class="fab fa-facebook"></i>
+                                    </div>
+                                    <div style="flex: 1;">
+                                        <strong style="color: #e4e6eb; display: block; margin-bottom: 0.25rem;">Facebook</strong>
+                                        <a href="https://www.facebook.com/share/19ReWgat88/" target="_blank" style="color: #00aaff; text-decoration: none; font-size: 0.9rem;">facebook.com/share/19ReWgat88/</a>
+                                    </div>
+                                </div>
+                                <div class="contact-item" style="display: flex; align-items: center; gap: 1rem; padding: 1rem; background: rgba(255,255,255,0.02); border-radius: 12px; transition: all 0.3s ease; border-left: 4px solid transparent;">
+                                    <div class="contact-icon" style="width: 45px; height: 45px; background: linear-gradient(135deg, #e4405f, #c13584); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.1rem;">
+                                        <i class="fab fa-instagram"></i>
+                                    </div>
+                                    <div style="flex: 1;">
+                                        <strong style="color: #e4e6eb; display: block; margin-bottom: 0.25rem;">Instagram</strong>
+                                        <a href="https://www.instagram.com/d.barua_/" target="_blank" style="color: #00aaff; text-decoration: none; font-size: 0.9rem;">instagram.com/d.barua_/</a>
+                                    </div>
+                                </div>
+                                <div class="contact-item" style="display: flex; align-items: center; gap: 1rem; padding: 1rem; background: rgba(255,255,255,0.02); border-radius: 12px; transition: all 0.3s ease; border-left: 4px solid transparent;">
+                                    <div class="contact-icon" style="width: 45px; height: 45px; background: linear-gradient(135deg, #333, #24292e); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.1rem;">
+                                        <i class="fab fa-github"></i>
+                                    </div>
+                                    <div style="flex: 1;">
+                                        <strong style="color: #e4e6eb; display: block; margin-bottom: 0.25rem;">GitHub</strong>
+                                        <a href="https://github.com/diganta-barua" target="_blank" style="color: #00aaff; text-decoration: none; font-size: 0.9rem;">github.com/diganta-barua</a>
+                                    </div>
+                                </div>
+                                <div class="contact-item" style="display: flex; align-items: center; gap: 1rem; padding: 1rem; background: rgba(255,255,255,0.02); border-radius: 12px; transition: all 0.3s ease; border-left: 4px solid transparent;">
+                                    <div class="contact-icon" style="width: 45px; height: 45px; background: linear-gradient(135deg, #dc3545, #c82333); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.1rem;">
+                                        <i class="fas fa-file-pdf"></i>
+                                    </div>
+                                    <div style="flex: 1;">
+                                        <strong style="color: #e4e6eb; display: block; margin-bottom: 0.25rem;">CV/Resume</strong>
+                                        <a href="folder/cv_mubin.pdf" target="_blank" style="color: #00aaff; text-decoration: none; font-size: 0.9rem;">Download CV</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <form id="contactForm" class="contact-form" style="background: #23272f; border-radius: 16px; padding: 2rem; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 8px 32px rgba(0,0,0,0.3);">
+                        <h3 style="color: #e4e6eb; margin-bottom: 1.5rem; font-size: 1.25rem; display: flex; align-items: center; gap: 0.75rem;">
+                            <i class="fas fa-paper-plane" style="color: #00aaff;"></i>
+                            Send Message
+                        </h3>
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required placeholder="Your name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required placeholder="your@email.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" required placeholder="Type your message..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <span class="logo-monogram">DB</span>
+                        <span class="logo-text">Diganta Barua</span>
+                    </div>
+                    <p>Software Engineer / Full-Stack Developer</p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#skills">Skills</a></li>
+                            <li><a href="#projects">Projects</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h4>Connect</h4>
+                        <div class="footer-social">
+                            <a href="https://github.com/diganta-barua" class="social-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://www.facebook.com/share/19ReWgat88/" class="social-link">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                            <a href="https://www.instagram.com/d.barua_/" class="social-link">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="mailto:baruadiganta958@gmail.com" class="social-link">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Diganta Barua. Crafted with passion and precision.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Image Popup Modal -->
+    <div id="imageModal" class="modal" onclick="closeImagePopup()">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <div class="modal-header">
+                <div class="zoom-controls">
+                    <button class="zoom-btn" onclick="zoomIn()" title="Zoom In">+</button>
+                    <span class="zoom-level">100%</span>
+                    <button class="zoom-btn" onclick="zoomOut()" title="Zoom Out">-</button>
+                    <button class="zoom-btn" onclick="resetZoom()" title="Reset">⌂</button>
+                </div>
+                <span class="close" onclick="closeImagePopup()" title="Close">&times;</span>
+            </div>
+            <div class="image-container">
+                <img id="modalImage" src="" alt="Project Image">
+            </div>
+        </div>
+    </div>
+
+    <!-- PDF Viewer Modal -->
+    <div id="pdfModal" class="modal pdf-modal" onclick="closePdfPopup()">
+        <div class="modal-content pdf-modal-content" onclick="event.stopPropagation()">
+            <div class="modal-header">
+                <h3 id="pdfTitle">Document Viewer</h3>
+                <span class="close" onclick="closePdfPopup()" title="Close">&times;</span>
+            </div>
+            <div class="pdf-container">
+                <iframe id="pdfFrame" src="" frameborder="0" allow="fullscreen"></iframe>
+                <div id="pdfFallback" style="display: none; padding: 2rem; text-align: center;">
+                    <p style="color: var(--text-secondary); margin-bottom: 1rem;">
+                        Unable to display PDF in browser. 
+                    </p>
+                    <a id="pdfDownloadLink" href="" target="_blank" class="btn btn-primary">
+                        <i class="fas fa-download"></i>
+                        Download PDF
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://use.fontawesome.com/35be55a773.js"></script>
+    
+    <script>
+        // Image popup functionality with zoom
+        let currentZoom = 1;
+        let isDragging = false;
+        let startX, startY, translateX = 0, translateY = 0;
+        
+        function openImagePopup(imageIdOrUrl, altText = '') {
+            console.log('Opening image popup with:', imageIdOrUrl);
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            
+            if (!modal || !modalImg) {
+                console.error('Modal elements not found');
+                return;
+            }
+            
+            // Check if it's a URL or element ID
+            if (imageIdOrUrl.startsWith('img/') || imageIdOrUrl.startsWith('http') || imageIdOrUrl.startsWith('/') || imageIdOrUrl.startsWith('./')) {
+                // It's a URL
+                modal.style.display = 'flex';
+                modalImg.src = imageIdOrUrl;
+                modalImg.alt = altText || 'Project Image';
+                document.body.style.overflow = 'hidden';
+                console.log('Modal should be visible now');
+            } else {
+                // It's an element ID (existing functionality)
+                const image = document.getElementById(imageIdOrUrl);
+                if (image && image.src && image.style.display !== 'none') {
+                    modal.style.display = 'flex';
+                    modalImg.src = image.src;
+                    modalImg.alt = image.alt;
+                    document.body.style.overflow = 'hidden';
+                }
+            }
+            
+            // Reset zoom and position
+            currentZoom = 1;
+            translateX = 0;
+            translateY = 0;
+            updateImageTransform();
+            updateZoomLevel();
+        }
+        
+        function closeImagePopup() {
+            const modal = document.getElementById('imageModal');
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+            
+            // Reset zoom and position
+            currentZoom = 1;
+            translateX = 0;
+            translateY = 0;
+        }
+        
+        function zoomIn() {
+            currentZoom = Math.min(currentZoom * 1.2, 5); // Max 5x zoom
+            updateImageTransform();
+            updateZoomLevel();
+        }
+        
+        function zoomOut() {
+            currentZoom = Math.max(currentZoom / 1.2, 0.5); // Min 0.5x zoom
+            updateImageTransform();
+            updateZoomLevel();
+        }
+        
+        function resetZoom() {
+            currentZoom = 1;
+            translateX = 0;
+            translateY = 0;
+            updateImageTransform();
+            updateZoomLevel();
+        }
+        
+        function updateImageTransform() {
+            const modalImg = document.getElementById('modalImage');
+            modalImg.style.transform = `scale(${currentZoom}) translate(${translateX}px, ${translateY}px)`;
+        }
+        
+        function updateZoomLevel() {
+            const zoomLevel = document.querySelector('.zoom-level');
+            zoomLevel.textContent = `${Math.round(currentZoom * 100)}%`;
+        }
+        
+        // Mouse wheel zoom
+        document.getElementById('imageModal').addEventListener('wheel', function(e) {
+            if (e.target.id === 'modalImage') {
+                e.preventDefault();
+                if (e.deltaY < 0) {
+                    zoomIn();
+                } else {
+                    zoomOut();
+                }
+            }
+        });
+        
+        // Drag functionality for zoomed images
+        document.getElementById('modalImage').addEventListener('mousedown', function(e) {
+            if (currentZoom > 1) {
+                isDragging = true;
+                startX = e.clientX - translateX;
+                startY = e.clientY - translateY;
+                this.style.cursor = 'grabbing';
+            }
+        });
+        
+        document.addEventListener('mousemove', function(e) {
+            if (isDragging) {
+                translateX = e.clientX - startX;
+                translateY = e.clientY - startY;
+                updateImageTransform();
+            }
+        });
+        
+        document.addEventListener('mouseup', function() {
+            isDragging = false;
+            const modalImg = document.getElementById('modalImage');
+            if (modalImg) {
+                modalImg.style.cursor = currentZoom > 1 ? 'grab' : 'default';
+            }
+        });
+        
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeImagePopup();
+            }
+        });
+        
+        // Calculate age in years, months, and days
+        function calculateAge(birthdate) {
+            const birthDate = new Date(birthdate);
+            const today = new Date();
+            let years = today.getFullYear() - birthDate.getFullYear();
+            let months = today.getMonth() - birthDate.getMonth();
+            let days = today.getDate() - birthDate.getDate();
+
+            if (days < 0) {
+                months--;
+                days += new Date(today.getFullYear(), today.getMonth(), 0).getDate();
+            }
+
+            if (months < 0) {
+                years--;
+                months += 12;
+            }
+
+            return `${years} years, ${months} months, and ${days} days`;
+        }
+
+        const ageElements = document.querySelectorAll('.age');
+        const ageText = calculateAge('2002-06-30');
+        ageElements.forEach(element => {
+            element.textContent = ageText;
+        });
+        
+        // CV Functions
+        function viewCV() {
+            // Open CV in a new tab for viewing
+            window.open('folder/cv_mubin.pdf', '_blank');
+        }
+        
+        function downloadCV() {
+            // Create a temporary link element to trigger download
+            const link = document.createElement('a');
+            link.href = 'folder/cv_mubin.pdf';
+            link.download = 'cv_mubin.pdf';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+
+        // PDF popup functionality
+        function openPdfPopup(pdfUrl, title) {
+            console.log('Opening PDF:', pdfUrl, title);
+            const modal = document.getElementById('pdfModal');
+            const pdfFrame = document.getElementById('pdfFrame');
+            const pdfTitle = document.getElementById('pdfTitle');
+            const pdfFallback = document.getElementById('pdfFallback');
+            const pdfDownloadLink = document.getElementById('pdfDownloadLink');
+            
+            if (!modal || !pdfFrame || !pdfTitle) {
+                console.error('PDF modal elements not found');
+                // Fallback to opening in new tab
+                window.open(pdfUrl, '_blank');
+                return;
+            }
+            
+            // Set title and download link
+            pdfTitle.textContent = title || 'Document Viewer';
+            if (pdfDownloadLink) {
+                pdfDownloadLink.href = pdfUrl;
+            }
+            
+            // Try to load PDF in iframe
+            pdfFrame.src = pdfUrl;
+            pdfFrame.style.display = 'block';
+            if (pdfFallback) {
+                pdfFallback.style.display = 'none';
+            }
+            
+            // Show modal
+            modal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+            
+            // Check if PDF loaded successfully after a delay
+            setTimeout(() => {
+                try {
+                    // If iframe fails to load, show fallback
+                    if (pdfFrame.contentDocument === null) {
+                        console.log('PDF iframe failed to load, showing fallback');
+                        pdfFrame.style.display = 'none';
+                        if (pdfFallback) {
+                            pdfFallback.style.display = 'block';
+                        }
+                    }
+                } catch (e) {
+                    console.log('PDF iframe access denied, showing fallback');
+                    pdfFrame.style.display = 'none';
+                    if (pdfFallback) {
+                        pdfFallback.style.display = 'block';
+                    }
+                }
+            }, 2000);
+            
+            console.log('PDF modal should be visible now');
+        }
+
+        function closePdfPopup() {
+            console.log('Closing PDF popup');
+            const modal = document.getElementById('pdfModal');
+            const pdfFrame = document.getElementById('pdfFrame');
+            
+            if (modal) {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+            
+            if (pdfFrame) {
+                pdfFrame.src = ''; // Clear the iframe to stop loading
+            }
+        }
+
+        // Update the view PDF links to use the popup
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('DOM loaded, setting up PDF links...');
+            
+            // Add click event listeners to View PDF links
+            const viewPdfLinks = document.querySelectorAll('.view-pdf');
+            console.log('Found', viewPdfLinks.length, 'PDF links');
+            
+            viewPdfLinks.forEach((link, index) => {
+                console.log('Setting up PDF link', index, ':', link.href);
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const pdfUrl = this.getAttribute('href');
+                    let title = 'Document Viewer';
+                    
+                    console.log('PDF link clicked:', pdfUrl);
+                    
+                    // Determine title based on URL
+                    if (pdfUrl.includes('cs.pdf')) {
+                        title = 'Computer Science Research Document';
+                    }
+                    
+                    openPdfPopup(pdfUrl, title);
+                });
+            });
+            
+            // Contact form event listener
+            const sendButton = document.getElementById("sendLetter");
+            if (sendButton) {
+                sendButton.addEventListener("click", function(e) {
+                    e.preventDefault();
+                    sendmail();
+                });
+            }
+        });
+        
+        // Simple Contact Form JavaScript
+        function addClass() {
+            document.body.classList.add("sent");
+            // Show success message with animation
+            const successMessage = document.getElementById("successMessage");
+            const contactForm = document.getElementById("contactForm");
+            if (successMessage && contactForm) {
+                contactForm.style.display = "none";
+                successMessage.style.display = "block";
+                successMessage.classList.add("show");
+                
+                // Add confetti effect
+                createConfettiEffect();
+            }
+        }
+
+        function resetContactForm() {
+            // Reset form
+            const contactForm = document.getElementById("contactForm");
+            const successMessage = document.getElementById("successMessage");
+            
+            if (contactForm && successMessage) {
+                contactForm.reset();
+                contactForm.style.display = "block";
+                successMessage.style.display = "none";
+                successMessage.classList.remove("show");
+                document.body.classList.remove("sent");
+            }
+        }
+
+        function createConfettiEffect() {
+            const colors = ['#00d4ff', '#ff6b35', '#00ff41', '#b300ff', '#ffd700'];
+            const confettiCount = 50;
+            
+            for (let i = 0; i < confettiCount; i++) {
+                setTimeout(() => {
+                    createConfettiPiece(colors[Math.floor(Math.random() * colors.length)]);
+                }, i * 50);
+            }
+        }
+
+        function createConfettiPiece(color) {
+            const confetti = document.createElement('div');
+            confetti.style.cssText = `
+                position: fixed;
+                width: ${Math.random() * 10 + 5}px;
+                height: ${Math.random() * 10 + 5}px;
+                background: ${color};
+                top: -10px;
+                left: ${Math.random() * 100}vw;
+                border-radius: ${Math.random() > 0.5 ? '50%' : '0'};
+                pointer-events: none;
+                z-index: 10000;
+                animation: confettiFall ${Math.random() * 3 + 2}s linear forwards;
+                box-shadow: 0 0 6px ${color};
+            `;
+            
+            document.body.appendChild(confetti);
+            
+            // Remove after animation
+            setTimeout(() => {
+                if (confetti.parentNode) {
+                    confetti.parentNode.removeChild(confetti);
+                }
+            }, 5000);
+        }
+
+        // Dynamic availability status
+        function updateAvailabilityStatus() {
+            const availabilityElement = document.getElementById('availability-status');
+            if (availabilityElement) {
+                const now = new Date();
+                const hour = now.getHours();
+                const isWeekend = now.getDay() === 0 || now.getDay() === 6; // Sunday = 0, Saturday = 6
+                
+                let status;
+                if (hour >= 9 && hour < 22 && !isWeekend) {
+                    status = 'Available for projects';
+                } else if (hour >= 9 && hour < 22) {
+                    status = 'Weekend - Limited availability';
+                } else {
+                    status = 'Currently offline';
+                }
+                
+                availabilityElement.textContent = status;
+            }
+        }
+
+        // Update availability status on page load
+        document.addEventListener('DOMContentLoaded', updateAvailabilityStatus);
+        
+        // Update availability status every minute
+        setInterval(updateAvailabilityStatus, 60000);
+        
+    </script>
+    <script src="techy-effects.js"></script>
+</body>
+</html>

@@ -1,4 +1,4 @@
-# Mubin Portfolio
+# My Portfolio
 
 🚀 Welcome to my portfolio website! This repository contains the source code for my personal portfolio, showcasing my projects, skills, and experience as a Computer Science and Engineering student at AIUB.
 
@@ -81,3 +81,4 @@ Contributions are welcome! If you have any suggestions or improvements, feel fre
 If you have any questions or want to get in touch, feel free to contact me at [mubin9516@gmail.com](mailto:mubin9516@gmail.com).
 
 Thank you for visiting my portfolio!
+

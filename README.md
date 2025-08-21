@@ -34,7 +34,7 @@ To set up the project locally, follow these steps:
 
 1. **Clone the repository**:
     ```bash
-    git clone https://https://github.com/diganta-barua/E-Portfolio
+    git clone https://github.com/diganta-barua/E-Portfolio
     ```
 
 2. **Navigate to the project directory**:
@@ -81,6 +81,7 @@ Contributions are welcome! If you have any suggestions or improvements, feel fre
 If you have any questions or want to get in touch, feel free to contact me at [baruadiganta958@gmail.com](baruadiganta958@gmail.com).
 
 Thank you for visiting my portfolio!
+
 
 
 

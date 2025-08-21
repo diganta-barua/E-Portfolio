@@ -78,7 +78,8 @@ mubin-portfolio/
 Contributions are welcome! If you have any suggestions or improvements, feel free to create an issue or submit a pull request.
 
 ## Contact
-If you have any questions or want to get in touch, feel free to contact me at [mubin9516@gmail.com](mailto:mubin9516@gmail.com).
+If you have any questions or want to get in touch, feel free to contact me at [mubin9516@gmail.com](baruadiganta958@gmail.com).
 
 Thank you for visiting my portfolio!
+
 
